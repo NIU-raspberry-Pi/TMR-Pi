@@ -3,7 +3,7 @@ project(TMR-Pi VERSION 0.0.0)
 
 set(CMAKE_CXX_STANDARD 17)
 
-file(GLOB_RECURSE SRC_FILES ./src/*.cpp)
+file(GLOB_RECURSE SRC_FILES CONFIGURE_DEPENDS "src/*.cpp")
 
 add_executable(${PROJECT_NAME} ${SRC_FILES})
 
