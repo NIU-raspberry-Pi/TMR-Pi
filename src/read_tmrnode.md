@@ -72,23 +72,15 @@ struct TaskState {
 
 ---
 
-## 4. 編譯與執行指南
+## 4. 執行與操作
 
-### 編譯依賴
-本程式依賴 OpenSSL 函式庫進行 AES 加密，並需要 pthread 支援多執行緒。
+本程式需要傳入節點 ID 以進行身分識別並載入對應的叢集 IP 配置。
 
+### 啟動節點
+在終端機執行編譯後的程式，並傳入節點編號 (A, B 或 C)：
 ```bash
-# 假設使用 g++ 編譯
-g++ -std=c++11 tmr_node.cpp -o tmr_node -lcrypto -lpthread
-```
+./TMR-Pi A
 
-### 執行方式
-程式需傳入本機的 Node ID (A, B, 或 C)。IP 配置寫死於 `main` 函式的 `cluster_ips` 中，請依實際環境修改。
-
-```bash
-./tmr_node A
-```
-
-### 操作指令
+### 操作指令 
 * **輸入 `fault`**：切換錯誤注入模式 (ON/OFF)。
 * **輸入任意字串**：發起一般加密與投票任務。
