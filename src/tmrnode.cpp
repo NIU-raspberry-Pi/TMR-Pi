@@ -284,7 +284,7 @@ int run_tmrnode(int argc, char* argv[]) {
     std::map<std::string, std::string> cluster_ips = {
         {"A", "192.168.50.41"},
         {"B", "192.168.50.14"},
-        {"C", "192.168.50.103"}
+        {"C", "192.168.50.62"}
     };
 
     if (argc < 2) {
