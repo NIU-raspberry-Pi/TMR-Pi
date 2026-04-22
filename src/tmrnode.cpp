@@ -7,6 +7,7 @@
 #include <condition_variable>
 #include <chrono>
 #include <cstring>
+#include <cstdio>
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <unistd.h>
